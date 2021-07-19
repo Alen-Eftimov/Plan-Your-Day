@@ -2,6 +2,7 @@ const DateHeader = () => {
     // TODO improve this, this is just to test the design
     const date = new Date();
     const day = date.getDate();
+    const year = date.getFullYear();
     const weekDay = [
       "Sunday",
       "Monday",
@@ -52,7 +53,7 @@ const DateHeader = () => {
     return (
       <header className={`${date.getHours()}`}>
         <h5 className="text-2xl">
-          {`${weekDay}, ${day}${enOrdinalSuffix} ${month}`}
+          {`${weekDay}, ${day}${enOrdinalSuffix} ${month} ${year}`}
         </h5>
         {/* <p className="pt-1 text-lg text-gray-100" data-testid="calendar-month">
           {month}
